@@ -1,0 +1,92 @@
+﻿{
+  "Nodes": {
+
+    "Place_Node": "Place",
+    "Label": "Place",
+    "Level": 0,
+    "Country_Node": [
+      {
+        "Label1": "Country",
+        "Label2": "India",
+        "params": {
+          "Name": "India",
+          "Level": "Level1",
+          "Description": " India is my country",
+          "IsLastNode": false
+        },
+        "State_Node": [
+          {
+            "Label1": "State",
+            "Label2": "Karnataka",
+            "params": {
+              "Name": "Karnataka",
+              "Level": "Level2",
+              "Description": " Karnataka is my state",
+              "IsLastNode": false
+            },
+            "District_Node": [
+              {
+                "Label1": "District",
+                "Label2": "Banglore",
+                "params": {
+                  "Name": "Banglore",
+                  "Level": "Level3",
+                  "Description": " Bangalore is my state",
+                  "IsLastNode": false
+                }
+              }
+            ]
+          },
+          {
+            "Label1": "State",
+            "Label2": "TamilNadu",
+            "params": {
+              "Name": "TamilNadu",
+              "Level": "Level2",
+              "Description": " TamilNadu is my state",
+              "IsLastNode": false
+            },
+            "District_Node": [ ]
+
+          },
+          {
+            "Label1": "State",
+            "Label2": "Himachal",
+            "params": {
+              "Name": "Himachal",
+              "Level": "Level2",
+              "Description": " Himachal Pradesh is my state",
+              "IsLastNode": false
+            },
+            "District_Node": [ ]
+
+          }
+        ]
+      },
+      {
+        "Label1": "Country",
+        "Label2": "Pakistan",
+        "params": {
+          "Name": "Pakistan",
+          "Level": "Level1",
+          "Description": " Pakistan is my Hindustan",
+          "IsLastNode": false
+        },
+        "State_Node": [
+          {
+            "Label1": "State",
+            "Label2": "Kabul",
+            "params": {
+              "Name": "Kabul",
+              "Level": "Level2",
+              "Description": "Kabul",
+              "IsLastNode": false
+            },
+            "District_Node": [ ]
+          }
+        ]
+      }
+    ]
+  }
+}
+ 

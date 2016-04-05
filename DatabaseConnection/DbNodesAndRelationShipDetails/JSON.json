@@ -1,0 +1,22 @@
+﻿{
+  "Nodes": {
+
+    "Place_Node": "Place",
+    "Label": "Place",
+    "Level": 0,
+    "Country_Node": [
+      {
+        "Label1": "Country",
+        "Label2": "India",
+        "params": {
+          "Name": "India",
+          "Level": 1,
+          "Description": " India is my country",
+          "IsLastNode": false
+        },
+        "State_Node": [          
+        ]
+      }
+    ]
+  }
+}
