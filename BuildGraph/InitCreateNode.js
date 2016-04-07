@@ -1,10 +1,13 @@
 ﻿
 (
-    function (f_init_Create_Node) {
-    var m_db_Connection = require('./DbConnection');
+    function (f_init_Create_Node) {    
     var i_total_No_Of_Nodes = 0;
-    var logger = require('winston');
-    var j_node_Json_File = require('./DbNodesAndRelationShipDetails/NodeDetails.json');
+    var logger = require('winston'),
+        j_node_Json_File = require('./DbNodesAndRelationShipDetails/NodeDetails.json'),
+        m_db_Connection = require('./RestAdapter'),
+        m_Find_Place = require('./FindDetailsFromSearch');
+        
+        
 
     var s_queries = require('./DbNodesAndRelationShipDetails/queryStringFile.js');    
     
@@ -24,6 +27,11 @@
                     else
                         if (result == 0) // This api will return 0 if there are no nodes created.
                         {
+                            // build the json File
+                            m_Find_Place.f_Find_Place_Graph_json(function (err, result)
+                            {
+                                return;
+                            });
                         f_create_Fully_Loaded_Database(function (err, result) {
                             logger.info('total number of nodes created ' + result);
                                 if (err) // do not check for totalNoOfNodes in case of error. No point

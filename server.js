@@ -2,7 +2,7 @@
 var express = require('express'),
     stylus = require('stylus'),    
     bodyparser = require('body-parser'),    
-    c_Db_Instance = require('./DatabaseConnection/DbConnection_index.js'); // Instead of database initialization, we need to initialize everything object here. (So make the code common)
+    c_Db_Instance = require('./BuildGraph/DbConnection_index.js'); // Instead of database initialization, we need to initialize everything object here. (So make the code common)
 
 var googleapis = require('googleapis');
 var logg = require('./log.js');
