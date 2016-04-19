@@ -9,7 +9,8 @@
     var s_http_Url_For_Transaction = 'http://' + s_host + ':' + i_port + '/db/data/transaction/commit';
         
         // Executes the Neo4j query
-        f_Http_Connection.f_run_Query_Command = function(query, node, f_call_back) {
+        // TODO: Pass the remoteUri
+        f_Http_Connection.f_run_Query_Command = function(query, params, f_call_back) {
         logger.info(query);
             m_request({
                 uri : s_http_Url_For_Transaction,            
@@ -20,7 +21,7 @@
                     'Custom-Header': 'charset=UTF-8',
                     'Authorization' : 'Basic bmVvNGo6dGVzdA=='
                 },
-                json : { statements: [{ statement : query, parameters : node }] }
+                json : { statements: [{ statement : query, parameters : params }] }
             
             },
         function (err, res, body) {
